@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_230106) do
+ActiveRecord::Schema.define(version: 2019_03_03_153600) do
 
   create_table "posts", force: :cascade do |t|
     t.string "caption"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 2019_02_28_230106) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
