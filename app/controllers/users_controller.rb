@@ -7,6 +7,15 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+def search  
+  if params[:search].blank?  
+    redirect_to(posts_path, alert: "Empty field!") and return  
+  else  
+    @parameter = params[:search].downcase  
+    @results = User.all.where("lower(user_name) LIKE :search", search: @parameter)  
+  end  
+end
+
   # GET /users/1
   # GET /users/1.json
   def show

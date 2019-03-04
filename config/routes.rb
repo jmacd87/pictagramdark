@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get "signup" => "users#new", as: "signup"
   get "login" => "sessions#new", as: "login"
   get "logout" => "sessions#destroy", as: "logout"
-  
+  get '/search' => 'users#search', :as => 'search_page'
 
 end
