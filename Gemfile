@@ -32,6 +32,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 gem "bcrypt", "~> 3.1.7"
+gem 'open-weather-api'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

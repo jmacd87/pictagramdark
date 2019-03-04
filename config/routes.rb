@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   get "login" => "sessions#new", as: "login"
   get "logout" => "sessions#destroy", as: "logout"
   get '/search' => 'users#search', :as => 'search_page'
-
+  get '/weather' => 'home#weather', as: "weather"
 end
