@@ -3,9 +3,10 @@
 </div>
 <div class="comment-content"></div>
 <%= comment.content %>
-<% if comment.user == current_user %>
+<% if comment.user == current_user or current_user.access_level == "superadmin" %>
 <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" }, remote: true do %>
 <span class="glyphicon glyphicon-remove delete-comment"></span>
 <%end%>
 <br>
 <%end%>
+<br>

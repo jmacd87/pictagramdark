@@ -160,9 +160,11 @@ body {
 }
 
 .wrapper {
+  position: absolute;
   width: 400px;
   margin: 30px auto 0 auto;
   text-align: center;
+  z-index: 2;
 }
 
 #result {
@@ -192,4 +194,9 @@ body {
 
 #showTemp:hover {
   cursor: pointer;
+}
+
+.background {
+  position: absolute;
+  z-index: 2;
 }

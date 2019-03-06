@@ -1,5 +1,9 @@
 <h3>Search Result</h3>  
 
     <% @results.each do |result| %>  
-        <%= result.user_name %><br>  
+        User Found: <%= result.user_name %><br> 
+         <%end%>
+     <% if @results.count == 0 %>
+     There are no results 
     <% end %>
+   
