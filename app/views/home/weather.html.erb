@@ -1,6 +1,11 @@
+<img class="background" src="https://preview.redd.it/mrlxr6luuc411.jpg?width=960&crop=smart&auto=webp&s=c8dcb00182f277f2c247fdfe40d85d407193db8f" height="100%" width="100%">
+
 <div class="wrapper"> 
+
     <!-- A wrapper for CSS-design -->
-    <p>What temperature is it at your <span class='italic'>exact</span> location? Click the button and find out!
+    <p>What temperature is it at your <span class='italic'>exact</span> location? 
+<br>
+    	Click the button and find out!
     </p>
     <!-- Some fancy text -->
     
@@ -42,7 +47,7 @@
             var desc = data.weather.description;
             
 
-            $('#result').text(tempr * 100 + '°' + location);
+            $('#result').text(tempr * 100 + '°F ' + location);
 
           }
         });
