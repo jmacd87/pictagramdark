@@ -1,32 +1,28 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
+    acts_as_voter
   	has_secure_password
   	enum access_level: [:user, :superadmin]
+
+    has_attached_file :avatar, styles: { medium: '152x152#' }
+    validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
 	validates :email, presence: true, uniqueness: true
 	validates :user_name, presence: true, length: { minimum: 4, maximum: 16 }
-	has_many :posts
+	has_many :posts, dependent: :destroy
 	has_many :comments, dependent: :destroy
+	has_many :notifications, dependent: :destroy
+	  has_many :follower_relationships, foreign_key: :following_id, class_name: 'Follow'
+	  has_many :followers, through: :follower_relationships, source: :follower
+	  has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
+	  has_many :following, through: :following_relationships, source: :following
 
-def self.search_by(search_term)
-		where("LOWER(user_name LIKE :search_term OR 
-			LOWER(email) LIKE :search_term",
-		 search_term: "%#{search_term.downcase}%")
-	end
+ def follow(user_id)
+    following_relationships.create(following_id: user_id)
+  end
+  
+  def unfollow(user_id)
+    following_relationships.find_by(following_id: user_id).destroy
+  end
 
-	   def self.create_with_auth_and_hash(authentication, auth_hash)
-        user = self.create!(
-            first_name: auth_hash["info"]["first_name"],
-            last_name: auth_hash["info"]["last_name"],
-            email: auth_hash["info"]["email"],
-            password: SecureRandom.hex(10),
-        )
-        user.authentications << authentication
-        return user
-    end
-
-    # grab google to access google for user data
-    def google_token
-        x = self.authentications.find_by(provider: 'google_oauth2')
-        return x.token unless x.nil?
-    end
 end 
 

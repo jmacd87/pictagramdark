@@ -1,9 +1,14 @@
+
+
+		<div class="search">
 <h3>Search Result</h3>  
 
-    <% @results.each do |result| %>  
-        User Found: <%= result.user_name %><br> 
+    <% @results.each do |result| %> 
+    <% user_name = result.user_name %>
+        User Found: <%= link_to user_name, profile_path(result.user_name)%><br> 
          <%end%>
      <% if @results.count == 0 %>
      There are no results 
     <% end %>
-   
+</div>
+

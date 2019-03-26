@@ -12,7 +12,7 @@ def search
     redirect_to(posts_path, alert: "Empty field!") and return  
   else  
     @parameter = params[:search].downcase  
-    @results = User.all.where("lower(user_name) LIKE :search", search: @parameter)  
+    @results = User.all.where("lower(user_name) LIKE :search", search: @parameter)
   end  
 end
 
@@ -37,8 +37,11 @@ end
 
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
+        
+     
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -68,6 +71,13 @@ end
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  def follow(user_id)
+    following_relationships.create(following_id: user_id)
+  end
+
+  def unfollow(user_id)
+    following_relationships.find_by(following_id: user_id).destroy
   end
 
   private
