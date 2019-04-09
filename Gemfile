@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem "paperclip", "~> 6.0.0"
+gem 'aws-sdk'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sassc-rails', '>= 2.1.0'
@@ -50,6 +51,11 @@ group :development, :test do
   gem 'rspec-rails', '~>3.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development do
