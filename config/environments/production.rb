@@ -1,13 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 config.paperclip_defaults = {
-  storage: :s3,
-  s3_credentials: {
-    bucket: 'pictagram',
-    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-    s3_region: ENV.fetch('AWS_REGION'),
-  }
+:storage => :s3,
+:s3_region => 'us-east-2',
+:bucket => 'pictagram',
+:s3_credentials => "pict0gram/config/aws.yml",
 }
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -35,7 +32,7 @@ config.paperclip_defaults = {
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
+  config.assets.compile = false
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -90,7 +87,7 @@ config.paperclip_defaults = {
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
