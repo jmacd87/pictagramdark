@@ -4,7 +4,6 @@ config.paperclip_defaults = {
 :storage => :s3,
 :s3_region => 'us-east-2',
 :bucket => 'pictagram',
-:path => '/:class/:attachment/:id_partition/:style/:filename',
 :s3_credentials => "#{Rails.root}/config/aws.yml",
 }
   # In the development environment your application's code is reloaded on
