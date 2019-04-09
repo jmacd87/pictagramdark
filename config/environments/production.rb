@@ -1,6 +1,12 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+config.paperclip_defaults = {
+:storage => :s3,
+:s3_region => 'us-east-2',
+:bucket => 'pictagram',
+:path => '/:class/:attachment/:id_partition/:style/:filename',
+:s3_credentials => "#{Rails.root}/config/aws.yml",
+}
   # Code is not reloaded between requests.
   config.cache_classes = true
 
