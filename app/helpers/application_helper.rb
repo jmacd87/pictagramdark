@@ -21,5 +21,12 @@ def profile_avatar_select(user)
   image_tag 'https://png.pngtree.com/svg/20161027/631929649c.svg', id: 'image-preview',
                                   class: 'img-responsive img-circle profile-image'
 end
-
+  helper_method :current_user
+  def current_user
+    if session[:user_id]
+      @current_user ||= User.find(session[:user_id])
+    else
+      @current_user = nil
+    end
+  end
 end
