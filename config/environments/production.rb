@@ -1,5 +1,4 @@
 Rails.application.configure do
-  require 'yaml'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -98,6 +97,6 @@ Rails.application.configure do
 :s3_region => 'us-east-2',
 :bucket => 'pictagram',
 :path => '/:class/:attachment/:id_partition/:style/:filename',
-:s3_credentials => YAML.load_file('aws.yml'),
+:s3_credentials => "#{Rails.root}/config/aws.yml"
 }
 end
