@@ -9,7 +9,6 @@ config.paperclip_defaults = {
     s3_region: ENV['AWS_REGION'],
   }
 }
-config.require_master_key = true
   # Code is not reloaded between requests.
   config.cache_classes = true
 
