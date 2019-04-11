@@ -66,7 +66,7 @@ config.paperclip_defaults = {
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-
+  config.secret_key_base = 'd43fd1088d8a40d29c46a263cdec122c670181285ed4048d695576aca30ce23f7884f9b6dc96e03696ee994f02b11758e83ae37254bc008409899ff781337da1'
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "instagram_#{Rails.env}"
