@@ -29,7 +29,7 @@ before_action :check_user
 
     if @post.save
       flash[:success] = "Your post has been created!"
-      redirect_to posts_path
+      redirect_to browse_posts_path
     else
       flash[:alert] = "Your new post couldn't be created!  Please check the form."
       render :new
@@ -42,7 +42,7 @@ before_action :check_user
 	def update
  	if @post.update(post_params)
       flash[:success] = "Post updated."
-      redirect_to posts_path
+      redirect_to browse_posts_path
     else
       flash.now[:alert] = "Update failed.  Please check the form."
       render :edit
@@ -52,7 +52,7 @@ before_action :check_user
 
 	def destroy
 	  @post.destroy
-	  redirect_to posts_path
+	  redirect_to browse_posts_path
 	end
 
 def like
