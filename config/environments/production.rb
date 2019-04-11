@@ -97,6 +97,6 @@ Rails.application.configure do
 :s3_region => 'us-east-2',
 :bucket => 'pictagram',
 :path => '/:class/:attachment/:id_partition/:style/:filename',
-:s3_credentials => "#{Rails.root}/config/aws.yml",
+:s3_credentials => "app/config/aws.yml",
 }
 end
