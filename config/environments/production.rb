@@ -93,10 +93,12 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
  config.paperclip_defaults = {
-:storage => :s3,
-:s3_region => 'us-east-2',
-:bucket => 'pictagram',
-:path => '/:class/:attachment/:id_partition/:style/:filename',
-:s3_credentials => "#{Rails.root}/config/aws.yml"
+  :storage => :s3,
+  :s3_credentials => {
+    :access_key_id => AWS_ACCESS_KEY_ID,
+    :secret_access_key => AWS_SECRET_ACCESS_KEY,
+    :s3_region => "us-east-2"
+  },
+  :bucket => 'pictagram'
 }
 end
