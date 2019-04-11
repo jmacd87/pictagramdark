@@ -28,7 +28,7 @@ gem "paperclip", "~> 6.0.0"
 
 gem "aws-sdk-s3", require: false
 gem 'simple_form'
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '>= 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 gem "bcrypt", "~> 3.1.7"
