@@ -1,24 +1,28 @@
-# README
+Instagram Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails backend
 
-Things you may want to cover:
+PosgreSQL database
 
-* Ruby version
+AWS s3 Image hosting
 
-* System dependencies
+Deployed on Heroku (https://pict0gram.herokuapp.com/)
 
-* Configuration
+Features:
 
-* Database creation
+  Create users
 
-* Database initialization
+  Create posts with images and captions
 
-* How to run the test suite
+  AJAX/Jquery for comments and likes(Acts_as_votable gem)
 
-* Services (job queues, cache servers, search engines, etc.)
+  Able to follow users and see feed of those users
+  
+  Able to browse all users posts
+  
+  CRUD all media(users, comments, posts)
+    
+  Load more images with AJAX and pagination (Kaminari gem)
+  
+Will add mobile optimization soon
 
-* Deployment instructions
-
-* ...
