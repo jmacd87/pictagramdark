@@ -1,18 +1,26 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "comments";
+@import "notifications";
+@import "posts";
+@import "profiles";
+@import "sessions";
+@import "users";
+
+
+@media (min-width: 860px) {
+  .desk_view_hide {
+  display: none !important;
+  width: 0% !important;
+  }
+}
+
+@media (max-width: 860px) {
+    .mobile_view_hide {
+      display: none !important;
+      width: 0%!important;}
+}
+
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -24,6 +32,7 @@ body {
 .navbar {
   margin-bottom: 0px !important;
   padding-bottom: 0px !important;
+  align-content: right;
 }
 .navbar-brand {
   a {
@@ -33,7 +42,7 @@ body {
   img {
   margin-top: 0px;
   width: 100px;
-  height: 40px;
+  height: 35px;
   }
 }
 
@@ -50,108 +59,6 @@ body {
 .navbar-container {
   width: 70%;
   margin-bottom: 0 px !important;
-}
-
-/* ## POST CUSTOMISATIONS ## */
-
-.posts-wrapper {
-  padding-top: 0px;
-  max-width: 642px;
-  margin: auto;
-
-}
-
-.post {
-  background-color: #fff;
-  border-color: #edeeee;
-  border-style: solid;
-  border-radius: 3px;
-  border-width: 1px;
-  margin-bottom: 0px;
-  .post-head {
-    flex-direction: row;
-    height: 64px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    color: #125688;
-    font-size: 15px;
-    line-height: 18px;
-    .user-name, .time-ago {
-      display: inline;
-
-    }
-    .user-name {
-      font-weight: 500;
-      margin-left: 15px;
-    }
-    .time-ago {
-      color: #A5A7AA;
-      float: right;
-      margin-top: 32px;
-    }
-  }
-  .image {
-    border-bottom: 1px solid #eeefef;
-    border-top: 1px solid #eeefef;
-  }
-}
-
-.post-bottom {
-  .user-name, .comment-content {
-    display: inline;
-  }
-  .caption {
-    margin-bottom: 7px;
-  }
-  .user-name {
-    font-weight: 500;
-    margin-right: 0.3em;
-    color: #125688;
-    font-size: 15px;
-  }
-  .user-name, .caption-content {
-    display: inline;
-  }
-  
-  #comment {
-    margin-top: 7px;
-    .user-name {
-      font-weight: 500;
-      margin-right: 0.3em;
-    }
-    .delete-comment {
-      float: right;
-      color: #515151;
-    }
-  }
-  margin-bottom: 5px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  font-size: 15px;
-  line-height: 18px;
-}
-
-.comment_content {
-  font-size: 15px;
-  line-height: 18px;
-  border: medium none;
-  width: 100%;
-  color: #4B4F54;
-}
-
-.comment-like-form {
-  padding-top: 24px;
-  margin-top: 0px;
-  margin-left: 24px;
-  margin-right: 24px;
-  min-height: 68px;
-  align-items: center;
-  border-top: 1px solid #EEEFEF;
-  flex-direction: row;
-  justify-content: center;
 }
 
 /* ## Wrapper and styling for the new and edit views ## */
@@ -198,26 +105,6 @@ html {
   height: 100vh;
 }
 
-.registration-bg {
-position: fixed; top: 54px; left: 0; 
-  padding-top: 150px;
-  height: 100vh;
-  width: 100%;
-  background-image: url(https://images.pexels.com/photos/248159/pexels-photo-248159.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  border: none;
-  background: lightblue !important;
-}
-
 .panel {
   border-radius: 8px;
 }
@@ -233,19 +120,6 @@ position: fixed; top: 54px; left: 0;
 }
 
 
-
-.login-bg {
- position: fixed; top: 54px; left: 0; 
-  padding-top: 250px;
-  height: 100vh;
-  width: 100%;
-  background-image: url(https://images.pond5.com/color-burst-colorful-blue-pink-footage-089236669_prevstill.jpeg);
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .like-button {
   margin-left: 20px;
 }
@@ -259,155 +133,6 @@ position: fixed; top: 54px; left: 0;
   max-width:400px;
 }
 
-#post_image {
-  padding: 1em;
-  margin: 0px auto;
-  
-}
-
-#paginator {
-  color: black;
-  height: 120px;
-  width: 120px;
-  margin: 60px auto 40px;
-  position: relative;
-  display: table;
-  border: 2px solid #4090DB;
-  border-radius: 50%;
-  :hover {
-    border: 1px solid #2D6DA8;
-    border-radius: 50%;
-  }
-}
-
-#load_more {
-  display: table-cell;
-  font-size: 12px;
-  padding: 0px 9px;
-  vertical-align: middle;
-  text-decoration: none;
-  a :hover {
-    color: #2D6DA8;
-  }
-}
-
-.comments {
-  .paginator {
-    margin: 0.5em;
-    .more-comments {
-      color: #A5A7AA;
-    }
-  }
-}
-
-.profile-header {
-  padding: 20px 0;
-}
-
-.profile-image {
-  margin: 20px auto;
-  height: 152px;
-  width: 152px;
-}
-
-.user-name-and-follow {
-  display: inline;
-}
-
-.profile-user-name {
-  display: inline;
-}
-
-a.btn.edit-button {
-  border-color: #818488;
-  color: #818488;
-  margin-left: 20px;
-}
-
-.profile-bio {
-  margin-top: 20px;
-}
-
-.likes {
-  margin-top: 0px;
-  margin-bottom: 7px;
-}
-
-.glyphicon-heart::before{
-  text-decoration: none;
-  color: red;
-}
-.like-button a:hover, a:focus {
-  text-decoration: none;
-  color: red;
-}
-
-.post-bottom.comments .glyphicon.glyphicon-remove.delete-comment::before {
-margin-left: 100%;
-align-self: end;
-}
-
-.comment-submit-button {
-  position: absolute;
-  left: -9999px;
-}
-
-.notification-dropdown {
-  button {
-    border: none;
-  }
-}
-
-.btn.btn-default.dropdown-toggle{
-    margin-top: 10px;
-    border: none;
-}
-
-.notification-index-list {
-  margin-top: 5em;
-  list-style: none;
-
-  li {
-    border: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    margin-top: 1em;
-    background-color: white;
-    padding: 1em;
-  }
-}
-
-
-.follow-button {
-  text-transform: uppercase;
-  border: solid !important;
-  border-width: 1px !important;
-  border-color: #4090db;
-  color: #4090db;
-  margin-left: 20px;
-  &:visited, &:focus, &:hover {
-    border-color: #2D6396;
-    color: #2D6396;
-  }
-}
-
-.unfollow-button {
-  text-transform: uppercase;
-  border-color: #66bd2b;
-  background-color: #66bd2b;
-  color: white;
-  margin-left: 20px;
-  &:visited, &:focus, &:hover {
-    border-color: #47821F;
-    background-color: #47821F;
-    color: white;
-  }
-}
-
-.user-statistics {
-  display: flex;
-  justify-content: space-between;
-}
 
 .thumb-img img {
   display: inline;
@@ -434,4 +159,20 @@ display:block;
 
 .image-wrap {
   margin-top: 50px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 54px;
+  color: black;
+}
+
+.icons {
+  display: flex;
+  margin-right: 25px;
+  justify-content: space-between;
 }

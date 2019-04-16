@@ -1,3 +1,22 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.login-bg {
+  padding-top: 20%;
+  background-image: url(https://images.pond5.com/color-burst-colorful-blue-pink-footage-089236669_prevstill.jpeg);
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: none;
+  background: lightblue !important;
+}
+
+.log-in.panel {
+	width: 350px;
+}

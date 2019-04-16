@@ -1,3 +1,11 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.registration-bg {
+position: fixed; top: 54px; left: 0; 
+  padding-top: 150px;
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://images.pexels.com/photos/248159/pexels-photo-248159.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
