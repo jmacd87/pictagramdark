@@ -1,3 +1,24 @@
-// Place all the styles related to the notifications controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.notification-dropdown {
+  button {
+    border: none;
+  }
+}
+
+.btn.btn-default.dropdown-toggle{
+    margin-top: 10px;
+    border: none;
+}
+
+.notification-index-list {
+  margin-top: 5em;
+  list-style: none;
+
+  li {
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-top: 1em;
+    background-color: white;
+    padding: 1em;
+  }
+}

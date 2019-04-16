@@ -1,3 +1,127 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+  
+}
+
+#paginator {
+  color: black;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid #4090DB;
+  border-radius: 50%;
+  :hover {
+    border: 1px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    color: #2D6DA8;
+  }
+}
+
+.likes {
+  margin-top: 0px;
+  margin-bottom: 7px;
+}
+
+.glyphicon-heart::before{
+  text-decoration: none;
+  color: red;
+}
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
+}
+
+.post-bottom {
+  .user-name, .comment-content {
+    display: inline;
+  }
+  .caption {
+    margin-bottom: 7px;
+  }
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    color: #125688;
+    font-size: 15px;
+  }
+  .user-name, .caption-content {
+    display: inline;
+  }
+  
+  #comment {
+    margin-top: 7px;
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+    }
+    .delete-comment {
+      float: right;
+      color: #515151;
+    }
+  }
+  margin-bottom: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.post {
+  background-color: #fff;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 0px;
+  .post-head {
+    flex-direction: row;
+    height: 64px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    color: #125688;
+    font-size: 15px;
+    line-height: 18px;
+    .user-name, .time-ago {
+      display: inline;
+
+    }
+    .user-name {
+      font-weight: 500;
+      margin-left: 15px;
+    }
+    .time-ago {
+      color: #A5A7AA;
+      float: right;
+      margin-top: 32px;
+    }
+  }
+  .image {
+    border-bottom: 1px solid #eeefef;
+    border-top: 1px solid #eeefef;
+  }
+}
+
+/* ## POST CUSTOMISATIONS ## */
+
+.posts-wrapper {
+  padding-top: 0px;
+  max-width: 642px;
+  margin: auto;
+
+}

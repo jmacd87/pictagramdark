@@ -16,32 +16,27 @@
 <nav class="navbar navbar-default">
   <div class="navbar-container">
     <div class="navbar-header">
-      <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse-1" data-toggle="collapse" type="button">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand">
-        <%= link_to image_tag('pictagram.png'), root_path %>
+        <%= link_to image_tag('pictagram.png'), posts_path %>
       </div>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-          <% if session[:user_id]!= nil %>
+      <% if session[:user_id]!= nil %>
           <li>
             <%= render 'notifications/notification_dropdown' %>
           </li>
+      <%end%>
+  </div>
+    <div class= "mobile_view_hide">
+      <ul class="nav navbar-nav navbar-right">
+          <% if session[:user_id]!= nil %>
           <li>
           <%= link_to "New Post", new_post_path %>
         </li>
           <%end%>
-        </li>
         <li>
         <%= link_to "Browse Posts", browse_posts_path %>
        </li>
-        <li>
-          <%= link_to "Feed", posts_path %>
-        </li>
           <% if session[:user_id]== nil %>
           <li>
           <%= link_to "Login", login_path %>
@@ -69,7 +64,6 @@
     </div>  
   </div>  
 <% end %>
-      
     </div>
   </div>
 </nav>
@@ -82,6 +76,33 @@
 </div>
 </div>
   <%= yield %>
+
+  <div class="footer">
+    <div class="desk_view_hide">
+        <ul class="icons">
+                        <li class="icons">
+                          <%= link_to posts_path do %>
+                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui-16-512.png", size: "35x35", style: "display: inline" %>
+                          <%end%>
+                        </li>
+                        <li class="icons">
+                          <%= link_to browse_posts_path do %>
+                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui3-14-512.png", size: "35x35", style: "display: inline"  %>
+                          <%end%>
+                        </li>
+                        <li class="icons">
+                            <%= link_to profile_path(:current_user) do %>
+                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui2-03-512.png", size: "30x30",style: "display: inline;" %>
+                            <%end%>
+                        </li>
+                        <li class="icons">
+                            <%= link_to logout_path do %>
+                                <%= image_tag "https://cdn2.iconfinder.com/data/icons/pictograms-3/512/18-512.png", size: "30x30",style: "display: inline;" %>
+                            <%end%>
+                        </li>
+                    </ul>
+      </div>
+</div>
 <!--     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
