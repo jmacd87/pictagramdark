@@ -20,17 +20,18 @@
       </button>
       <div class="navbar-brand">
         <%= link_to image_tag('pictagram.png'), posts_path %>
-      
-      <% if session[:user_id]!= nil %>
-          <li>
+      </div> 
+  </div>
+    
+      <ul class="nav navbar-nav navbar-right">
+        <% if session[:user_id]!= nil %>
+        <li>
             <%= render 'notifications/notification_dropdown' %>
           </li>
-      <%end%>
-      </div>
-  </div>
-    <div class= "w-100 mobile_view_hide">
-      <ul class="nav navbar-nav navbar-right">
-          <% if session[:user_id]!= nil %>
+          Current User: <%= current_user.user_name %>
+          <div class= "w-100 mobile_view_hide">
+          
+           
           <li>
           <%= link_to "New Post", new_post_path %>
         </li>
