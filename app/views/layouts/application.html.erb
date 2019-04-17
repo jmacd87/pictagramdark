@@ -16,21 +16,16 @@
 <nav class="navbar navbar-default">
   <div class="navbar-container">
     <div class="navbar-header">
-        <span class="icon-bar"></span>
-      </button>
       <div class="navbar-brand">
         <%= link_to image_tag('pictagram.png'), posts_path %>
-      <ul class="nav navbar-nav navbar-right">
-      <% if session[:user_id]!= nil %>
-          <li>
-            <%= render 'notifications/notification_dropdown' %>
-          </li>
-      <%end%>
       </div>
   </div>
     <div class= "w-100 mobile_view_hide">
       <ul class="nav navbar-nav navbar-right">
           <% if session[:user_id]!= nil %>
+          <li>
+            <%= render 'notifications/notification_dropdown' %>
+          </li>
           <li>
           <%= link_to "New Post", new_post_path %>
         </li>
