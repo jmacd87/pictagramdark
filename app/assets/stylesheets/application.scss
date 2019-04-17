@@ -34,6 +34,7 @@ body {
   margin-bottom: 0px !important;
   padding-bottom: 0px !important;
   align-content: right;
+  white-space: nowrap;
 }
 .navbar-brand {
   a {
@@ -51,9 +52,12 @@ body {
   background-color: #fff;
   height: 54px;
   margin-bottom: 0px !important;
+  justify-content: center;
+
   .navbar-nav li a {
     color: #125688;
     margin-bottom: 0 px;
+
   }
 }
 
