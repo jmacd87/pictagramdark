@@ -53,7 +53,7 @@ body {
   height: 54px;
   margin-bottom: 0px !important;
   justify-content: center;
-
+  white-space: nowrap;
   .navbar-nav li a {
     color: #125688;
     margin-bottom: 0 px;
@@ -65,6 +65,7 @@ body {
   width: 70%;
   margin-bottom: 0 px !important;
   align-content: right;
+  white-space: nowrap;
 }
 
 /* ## Wrapper and styling for the new and edit views ## */
