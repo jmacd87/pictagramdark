@@ -8,14 +8,14 @@
 @import "users";
 
 
-@media (min-width: 860px) {
+@media only screen and(min-width: 860px) {
   .desk_view_hide {
   display: none !important;
   width: 0% !important;
   }
 }
 
-@media (max-width: 860px) {
+@media only screen and (max-width: 860px) {
     .mobile_view_hide {
       display: none !important;
       width: 0%!important;}
