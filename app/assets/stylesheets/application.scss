@@ -36,7 +36,7 @@ body {
   align-content: right;
 }
 
-.mobile_view_hide li {
+.mobile_view_hide li a {
   display: inline-block;
   margin-left: 50px;
 }
@@ -62,6 +62,7 @@ body {
   .navbar-nav li a {
     color: #125688;
     margin-bottom: 0 px;
+    display: inline-block;
 
   }
 }
@@ -156,11 +157,11 @@ form {
 }
 .searchbar {
   display: inline-block;
+  margin-left: 20%;
 }
 .search {
 margin-top: 50px;
 max-width: 175px;
-  margin: auto;
 }
 
 .error {
