@@ -24,7 +24,7 @@
             <%= render 'notifications/notification_dropdown' %>
           </li>
 
-          <div class= "w-100 mobile_view_hide">
+          <div class= "mobile_view_hide">
                 <% if session[:user_id]!= nil %>
                 <li>
                 <%= link_to "New Post", new_post_path %>
