@@ -38,6 +38,7 @@ body {
 
 .mobile_view_hide li {
   display: inline-block;
+  margin-left: 50px;
 }
 
 
@@ -150,6 +151,9 @@ html {
   border-radius: 25px;
 }
 
+.searchbar {
+  display: inline-block;
+}
 .search {
 margin-top: 50px;
 max-width: 175px;
