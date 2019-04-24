@@ -8,14 +8,14 @@
 @import "users";
 
 
-@media only screen and(min-width: 944px) {
+@media only screen and(min-width: 999px) {
   .desk_view_hide {
   display: none !important;
   width: 0% !important;
   }
 }
 
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 1000px) {
     .mobile_view_hide {
       display: none !important;
       width: 0%!important;}
@@ -36,7 +36,7 @@ body {
   align-content: right;
 }
 
-.mobile_view_hide li {
+.mobile_view_hide {
   display: inline-block;
   margin-left: 50px;
 }
