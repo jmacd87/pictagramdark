@@ -27,42 +27,40 @@
           </li>
 
           <div class= "w-100 mobile_view_hide">
-          <% if session[:user_id]!= nil %>
-          
-          <li>
-          <%= link_to "New Post", new_post_path %>
-        </li>
-          <%end%>
-        <li>
-        <%= link_to "Browse Posts", browse_posts_path %>
-       </li>
-          <% if session[:user_id]== nil %>
-          <li>
-          <%= link_to "Login", login_path %>
-          </li>
-          <li>
-          <%= link_to "Register", signup_path %>
-          </li>
-          <%else%>
-          <li>
-          <%= link_to "Logout", logout_path %>
-          </li>
-          <%end%>
-
-          <ul class="nav navbar-nav navbar-right">
-          <li>
-      <%= form_tag(search_page_path, :method => "get",   
-    class: 'navbar-form navbar-right') do %>  
-  <div class="input-group">  
-    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
-    <div class="input-group-btn">  
-      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%> 
-      </li> 
-    </ul>
-    </ul>
-    </div>
-    </div>  
-  </div>  
+                <% if session[:user_id]!= nil %>
+                
+                <li>
+                <%= link_to "New Post", new_post_path %>
+              </li>
+                <%end%>
+              <li>
+              <%= link_to "Browse Posts", browse_posts_path %>
+             </li>
+                <% if session[:user_id]== nil %>
+                <li>
+                <%= link_to "Login", login_path %>
+                </li>
+                <li>
+                <%= link_to "Register", signup_path %>
+                </li>
+                <%else%>
+                <li>
+                <%= link_to "Logout", logout_path %>
+                </li>
+                <%end%>
+              <li>
+                <%= form_tag(search_page_path, :method => "get",   
+                class: 'navbar-form navbar-right') do %>  
+                <div class="input-group">  
+                <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+                <div class="input-group-btn">  
+                <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%> 
+              </li> 
+                </div>
+                </div>  
+          </div>
+      </ul>
+    
 <% end %>
     </div>
   </div>
