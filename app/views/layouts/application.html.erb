@@ -21,11 +21,12 @@
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <% if session[:user_id]!= nil %>
             <%= render 'notifications/notification_dropdown' %>
           </li>
 
           <div class= "mobile_view_hide">
-                <% if session[:user_id]!= nil %>
+                
                 <li>
                 <%= link_to "New Post", new_post_path %>
                 </li>
