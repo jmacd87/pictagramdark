@@ -20,14 +20,16 @@
         <%= link_to image_tag('pictagram.png'), posts_path %>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <% if session[:user_id]!= nil %>
+          <li>
+            <% if session[:user_id]!= nil %>
             <%= render 'notifications/notification_dropdown' %>
+            <%end%>
           </li>
 
           <div class= "mobile_view_hide">
                 
                 <li>
+                  <% if session[:user_id]!= nil %>
                 <%= link_to "New Post", new_post_path %>
                 </li>
                 <%end%>
@@ -67,22 +69,22 @@
         <ul class="icons">
                         <li class="icons">
                           <%= link_to posts_path do %>
-                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui-16-512.png", size: "35x35", style: "display: inline" %>
+                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui-16-512.png", size: "25x25", style: "display: inline" %>
                           <%end%>
                         </li>
                         <li class="icons">
                           <%= link_to browse_posts_path do %>
-                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui3-14-512.png", size: "35x35", style: "display: inline"  %>
+                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui3-14-512.png", size: "25x25", style: "display: inline"  %>
                           <%end%>
                         </li>
                         <li class="icons">
                             <%= link_to profile_path(:current_user) do %>
-                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui2-03-512.png", size: "30x30",style: "display: inline;" %>
+                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui2-03-512.png", size: "25x25",style: "display: inline;" %>
                             <%end%>
                         </li>
                         <li class="icons">
                             <%= link_to logout_path do %>
-                                <%= image_tag "https://cdn2.iconfinder.com/data/icons/pictograms-3/512/18-512.png", size: "30x30",style: "display: inline;" %>
+                                <%= image_tag "https://cdn2.iconfinder.com/data/icons/pictograms-3/512/18-512.png", size: "25x25",style: "display: inline;" %>
                             <%end%>
                         </li>
                     </ul>
