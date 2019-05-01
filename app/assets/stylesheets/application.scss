@@ -36,6 +36,13 @@ body {
   align-content: right;
 }
 
+.nav.navbar.navbar-default li {
+  display: inline-block
+}
+
+.mobile_view_hide {
+  display: inline;
+}
 .mobile_view_hide li {
   display: inline-block;
   margin-left: 50px;
@@ -63,8 +70,6 @@ body {
   .navbar-nav li a {
     color: #125688;
     margin-bottom: 0 px;
-    display: inline-block;
-
   }
 }
 
