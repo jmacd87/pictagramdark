@@ -48,6 +48,19 @@
                 <%= link_to "Logout", logout_path %>
                 </li>
                 <% end %> 
+                <li>
+                  <div class= "searchbar">
+                  <%= form_tag(search_page_path, :method => "get",   
+                  class: 'navbar-form navbar-right') do %>  
+                  <div class="input-group">  
+                  <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+                  <div class="input-group-btn">  
+                  <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%> 
+                  <%end %>
+                  </div>
+                  </div>
+                  </div>
+                </li>
           </div>
       </ul>
     </div>
@@ -74,11 +87,16 @@
                         </li>
                         <li class="icons">
                           <%= link_to browse_posts_path do %>
-                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui3-14-512.png", size: "25x25", style: "display: inline"  %>
+                                <%= image_tag "https://image.flaticon.com/icons/png/512/55/55369.png", size: "20x20", style: "display: inline"  %>
+                          <%end%>
+                        </li>
+                         <li class="icons">
+                          <%= link_to new_post_path do %>
+                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/social-object-set-4-2/74/31-256.png", size: "25x25", style: "display: inline"  %>
                           <%end%>
                         </li>
                         <li class="icons">
-                            <%= link_to profile_path(:current_user) do %>
+                            <%= link_to profiles_show_path(:current_user) do %>
                                 <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui2-03-512.png", size: "20x20",style: "display: inline;" %>
                             <%end%>
                         </li>
