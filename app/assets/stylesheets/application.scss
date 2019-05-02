@@ -163,10 +163,11 @@ form {
 }
 .searchbar {
   display: inline-block;
-  margin-left: 20%;
+  margin-left: 50px;
+  margin-top: 15px;
 }
 .search {
-margin-top: 50px;
+margin-top: 15px;
 max-width: 175px;
 }
 
@@ -187,7 +188,7 @@ display:block;
   position: fixed;
   left: 0;
   bottom: 0;
-  margin-top: 50px;
+  margin-top: 90px;
   width: 100%;
   background-color: #fff;
   height: 54px;
