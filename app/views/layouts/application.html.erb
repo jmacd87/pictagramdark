@@ -18,13 +18,13 @@
       <div class="navbar-brand">
         <%= link_to image_tag('pictagram.png'), posts_path %>
       </div>
-      <ul class="nav navbar-nav navbar-right">
+      
           <li>
             <% if session[:user_id]!= nil %>
             <%= render 'notifications/notification_dropdown' %>
             <%end%>
           </li>
-
+<ul class="nav navbar-nav navbar-right">
           <div class= "w-100 mobile_view_hide">
                 
                 <li>
