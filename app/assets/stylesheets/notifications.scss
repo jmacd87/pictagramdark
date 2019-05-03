@@ -7,6 +7,7 @@
 .btn.btn-default.dropdown-toggle{
     margin-top: 10px;
     border: none;
+    background-color: white;
 }
 
 .notification-index-list {
@@ -22,4 +23,9 @@
     padding: 1em;
     z-index: 2;
   }
+}
+
+ul.dropdown-menu {
+  background-color: white;
+  margin-left: 50px;
 }

@@ -23,6 +23,7 @@ align-self: end;
   border: medium none;
   width: 100%;
   color: #4B4F54;
+  display: inline-block;
 }
 
 .comment-like-form {
@@ -32,7 +33,7 @@ align-self: end;
   margin-right: 24px;
   min-height: 68px;
   align-items: center;
-  border-top: 1px solid #EEEFEF;
+  border: 1px solid #EEEFEF;
   flex-direction: row;
   justify-content: center;
 }
