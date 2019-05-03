@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Pictagram</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,7 +25,7 @@
             <%end%>
           </li>
 
-          <div class= "mobile_view_hide">
+          <div class= "w-100 mobile_view_hide">
                 
                 <li>
                   <% if session[:user_id]!= nil %>
