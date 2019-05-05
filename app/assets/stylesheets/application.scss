@@ -7,7 +7,13 @@
 @import "sessions";
 @import "users";
 
-
+.navbar-nav {
+@media (max-width: 767px){
+.open .dropdown-menu {
+  background-color: white !important;
+}
+  }
+  }
 @media only screen and(min-width: 999px) {
   .desk_view_hide {
   display: none !important;
@@ -25,7 +31,7 @@ body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   height: 87vh;
-  margin-bottom: 50px;
+  
 
 }
 
@@ -188,7 +194,7 @@ display:block;
   position: fixed;
   left: 0;
   bottom: 0;
-  margin-top: 90px;
+  margin-top: 0px;
   width: 100%;
   background-color: #fff;
   height: 54px;
