@@ -11,6 +11,17 @@
 @media (max-width: 767px){
 .open .dropdown-menu {
   background-color: white !important;
+  width: 300px ;
+}
+  }
+  }
+
+  .navbar-nav {
+@media (min-width: 767px){
+.open .dropdown-menu {
+  background-color: white !important;
+  width: 300px ;
+  left: 0;
 }
   }
   }
@@ -30,7 +41,8 @@
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  height: 87vh;
+  min-height: 87vh;
+  margin-bottom: 60px;
   
 
 }
@@ -184,6 +196,10 @@ display:block;
 
 .col-md-6{
   margin-top: 30px;
+}
+
+.col-sm-1{
+  float: left;
 }
 
 .image-wrap {
