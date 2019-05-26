@@ -11,16 +11,16 @@
 @media (max-width: 767px){
 .open .dropdown-menu {
   background-color: white !important;
-  width: 300px ;
+  width: 300px !important ;
 }
   }
   }
 
-  .navbar-nav {
+.navbar-nav {
 @media (min-width: 767px){
 .open .dropdown-menu {
   background-color: white !important;
-  width: 300px ;
+  width: 300px !important ;
   left: 0;
 }
   }

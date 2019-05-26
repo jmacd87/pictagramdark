@@ -1,11 +1,13 @@
 .login-bg {
-  padding-top: 20%;
+  position: fixed; top: 50px; left: 0; 
+  padding-top: 150px;
+  height: 100vh;
+  width: 100%;
   background-image: url(https://images.pond5.com/color-burst-colorful-blue-pink-footage-089236669_prevstill.jpeg);
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
-  height: 100%;
 
 }
 
