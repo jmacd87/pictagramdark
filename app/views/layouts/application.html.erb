@@ -69,41 +69,41 @@
         <ul class="icons">
                         <li class="icons">
                           <%= link_to posts_path do %>
-                                <i class="fas fa-home fa-2x"></i>
+                                <i class="fas fa-home"></i>
                           <%end%>
                         </li>
                         <li class="icons">
                           <%= link_to browse_posts_path do %>
-                            <i class="fas fa-search fa-2x"></i>
+                            <i class="fas fa-search"></i>
                               
                           <%end%>
                         </li>
                          <li class="icons">
                           <%= link_to new_post_path do %>
-                                <i class="far fa-plus-square fa-2x"></i>
+                                <i class="far fa-plus-square"></i>
                           <%end%>
                         </li>
 
                         <%if current_user != nil %>
                         <li class="icons">
                             <%= link_to profile_path(current_user.user_name) do %>
-                                <i class="fas fa-user-alt fa-2x"></i>
+                                <i class="fas fa-user-alt"></i>
                             <%end%>
                         </li>
                         <li class="icons">
                             <%= link_to logout_path do %>
-                              <i class="fas fa-sign-out-alt fa-2x"></i>
+                              <i class="fas fa-sign-out-alt"></i>
                             <%end%>
                         </li>
                         <%else%>
                           <li class="icons">
                             <%= link_to login_path do %>
-                                <i class="fas fa-sign-in-alt fa-2x"></i>
+                                <i class="fas fa-sign-in-alt"></i>
                                 <%end%>
                           </li>
                           <li class="icons">
                             <%= link_to signup_path do %>
-                                <i class="fas fa-user-plus fa-2x"></i>
+                                <i class="fas fa-user-plus"></i>
                                 <%end%>
                           </li>
 
