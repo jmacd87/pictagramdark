@@ -69,40 +69,41 @@
         <ul class="icons">
                         <li class="icons">
                           <%= link_to posts_path do %>
-                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui-16-512.png", size: "25x25", style: "display: inline" %>
+                                <i class="fas fa-home fa-2x"></i>
                           <%end%>
                         </li>
                         <li class="icons">
                           <%= link_to browse_posts_path do %>
-                                <%= image_tag "https://image.flaticon.com/icons/png/512/55/55369.png", size: "20x20", style: "display: inline"  %>
+                            <i class="fas fa-search fa-2x"></i>
+                              
                           <%end%>
                         </li>
                          <li class="icons">
                           <%= link_to new_post_path do %>
-                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/social-object-set-4-2/74/31-256.png", size: "25x25", style: "display: inline"  %>
+                                <i class="far fa-plus-square fa-2x"></i>
                           <%end%>
                         </li>
 
                         <%if current_user != nil %>
                         <li class="icons">
                             <%= link_to profile_path(current_user.user_name) do %>
-                                <%= image_tag "https://cdn1.iconfinder.com/data/icons/glyph-ui/100/ui2-03-512.png", size: "20x20",style: "display: inline;" %>
+                                <i class="fas fa-user-alt fa-2x"></i>
                             <%end%>
                         </li>
                         <li class="icons">
                             <%= link_to logout_path do %>
-                                <%= image_tag "http://cdn.onlinewebfonts.com/svg/img_87594.png", size: "20x20",style: "display: inline;" %>
+                              <i class="fas fa-sign-out-alt fa-2x"></i>
                             <%end%>
                         </li>
                         <%else%>
                           <li class="icons">
                             <%= link_to login_path do %>
-                                <%= image_tag "https://cdn2.iconfinder.com/data/icons/pictograms-3/512/18-512.png", size: "20x20",style: "display: inline;" %>
+                                <i class="fas fa-sign-in-alt fa-2x"></i>
                                 <%end%>
                           </li>
                           <li class="icons">
                             <%= link_to signup_path do %>
-                                <%= image_tag "https://static.thenounproject.com/png/736736-200.png", size: "25x25",style: "display: inline;" %>
+                                <i class="fas fa-user-plus fa-2x"></i>
                                 <%end%>
                           </li>
 
@@ -114,7 +115,7 @@
 <!--     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
+<script src="https://kit.fontawesome.com/caef68614d.js"></script>
 <script>
      $(document).ready(function(){
         $('.dropdown-toggle').dropdown()
