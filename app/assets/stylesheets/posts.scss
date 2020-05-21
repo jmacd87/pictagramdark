@@ -47,6 +47,8 @@
 .post-bottom {
   .user-name, .comment-content {
     display: inline;
+    color: #125688;
+    background-color:#505050;
   }
   .caption {
     margin-bottom: 7px;
@@ -69,7 +71,7 @@
     }
     .delete-comment {
       float: right;
-      color: #515151;
+      color: white;
     }
   }
   margin-bottom: 5px;
@@ -82,8 +84,8 @@
 }
 
 .post {
-  background-color: #fff;
-  border-color: #edeeee;
+  background-color: #202020;
+  border-color: #202020;
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
@@ -97,6 +99,7 @@
     color: #125688;
     font-size: 15px;
     line-height: 18px;
+    background-color:#505050;
     .user-name, .time-ago {
       display: inline;
 
@@ -112,8 +115,8 @@
     }
   }
   .image {
-    border-bottom: 1px solid #eeefef;
-    border-top: 1px solid #eeefef;
+    // border-bottom: 1px solid #eeefef;
+    // border-top: 1px solid #eeefef;
   }
 }
 
