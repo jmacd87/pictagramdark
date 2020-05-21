@@ -13,20 +13,19 @@
   </head>
 
   <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" role="navigation">
   <div class="navbar-container">
     <div class="navbar-header">
       <div class="navbar-brand">
       <h2>Pictagram</h2>
       </div>
       </div>
-      <ul class="nav navbar-nav ml-auto">
+      <ul class="nav navbar-nav navbar-right">
           <li>
             <% if session[:user_id]!= nil %>
             <%= render 'notifications/notification_dropdown' %>
             <%end%>
           </li>
-      <div class="right_side">
           <div class= "mobile_view_hide">
                 
                 <li>
@@ -49,7 +48,6 @@
                 <%= link_to "Logout", logout_path %>
                 </li>
                 <% end %> 
-          </div>
           </div>
       </ul>
 
