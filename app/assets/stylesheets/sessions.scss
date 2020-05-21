@@ -3,7 +3,8 @@
   height: 100vh;
   width: 100%;
   background-image: url(https://images.pond5.com/color-burst-colorful-blue-pink-footage-089236669_prevstill.jpeg);
-  background-size: cover;
+  background-size: cover !important;
+  background-color: #202020;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -15,9 +16,11 @@
   margin-right: auto;
   text-align: center;
   border: none;
-  background: lightblue !important;
+  background: #202020!important;
+  color:#5E5E5D;
 }
 
 .log-in.panel {
-	width: 350px;
+  width: 350px;
+  border-radius: 15px;
 }

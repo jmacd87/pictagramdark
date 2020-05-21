@@ -17,16 +17,17 @@
   <div class="navbar-container">
     <div class="navbar-header">
       <div class="navbar-brand">
-        <%= link_to image_tag('pictagram.png'), posts_path %>
+      <h2>Pictagram</h2>
       </div>
-      <ul class="nav navbar-nav navbar-right">
+      </div>
+      <ul class="nav navbar-nav ml-auto">
           <li>
             <% if session[:user_id]!= nil %>
             <%= render 'notifications/notification_dropdown' %>
             <%end%>
           </li>
-
-          <div class= "w-100 mobile_view_hide">
+      <div class="right_side">
+          <div class= "mobile_view_hide">
                 
                 <li>
                   <% if session[:user_id]!= nil %>
@@ -49,8 +50,9 @@
                 </li>
                 <% end %> 
           </div>
+          </div>
       </ul>
-    </div>
+
   </div>
 </nav>
 

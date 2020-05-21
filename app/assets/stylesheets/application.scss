@@ -19,7 +19,7 @@
 .navbar-nav {
 @media (min-width: 767px){
 .open .dropdown-menu {
-  background-color: white !important;
+  background-color: #202020!important;
   width: 300px !important ;
   left: 0;
 }
@@ -39,7 +39,7 @@
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #202020 !important;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   min-height: 87vh;
   margin-bottom: 60px !important;
@@ -51,15 +51,17 @@ body {
 .navbar {
   margin-bottom: 0px !important;
   padding-bottom: 0px !important;
-  align-content: right;
 }
 
 .nav.navbar.navbar-default li {
-  display: inline-block
+  display: inline-block;
+  
 }
-
+.right_side{
+  text-align: right;
+}
 .mobile_view_hide {
-  display: inline;
+  display: inline-block;
 }
 .mobile_view_hide li {
   display: inline-block;
@@ -71,8 +73,12 @@ body {
 .navbar-brand {
   a {
     color: #125688;
+    text-decoration: none;
   }
+  h2 {
+    margin-top: -5px;
 
+  }
   img {
   margin-top: 0px;
   width: 100px;
@@ -81,13 +87,15 @@ body {
 }
 
 .navbar-default {
-  background-color: #fff;
+  background-color: #202020 !important;
+  border-color: #202020 !important;
   height: 54px;
   margin-bottom: 0px !important;
   justify-content: center;
   .navbar-nav li a {
     color: #125688;
     margin-bottom: 0 px;
+    right: 0;
   }
 }
 
@@ -104,7 +112,7 @@ body {
   height: 200px;
   background-color: #fff;
   border: 1px solid #eeefef;
-  border-radius: 3px;
+  border-radius: 15px;
 }
 
 .edit-links {
@@ -136,11 +144,12 @@ body {
 
 html {
   height: 100vh;
+  background-color: #202020;
 }
 
 
 .panel {
-  border-radius: 8px;
+  border-radius: 15px;
 }
 
 .panel-heading{
@@ -212,7 +221,7 @@ display:block;
   bottom: 0;
   margin-top: 0px;
   width: 100%;
-  background-color: #fff;
+  background-color: #202020;
   height: 54px;
   color: black;
 }
@@ -229,5 +238,13 @@ i {
   color: black;
   font-size: 23px !important;
   margin-top: 3px;
+}
+
+.input-lg{
+  border: none;
+}
+
+.input-lg:focus{
+  outline: none;
 }
 
