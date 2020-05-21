@@ -45,10 +45,11 @@
 }
 
 .post-bottom {
+  background-color:#505050;
   .user-name, .comment-content {
     display: inline;
     color: #125688;
-    background-color:#505050;
+    
   }
   .caption {
     margin-bottom: 7px;
@@ -107,6 +108,7 @@
     .user-name {
       font-weight: 500;
       margin-left: 15px;
+      background-color:#505050;
     }
     .time-ago {
       color: #A5A7AA;
