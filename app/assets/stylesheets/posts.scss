@@ -46,6 +46,7 @@
 
 .post-bottom {
   background-color:#505050;
+  padding-bottom: 15px;
   .user-name, .comment-content {
     display: inline;
     color: #125688;
@@ -62,6 +63,10 @@
   }
   .user-name, .caption-content {
     display: inline;
+  }
+  .user-name a{
+    color: #125688;
+    margin-right: 0.3em;
   }
   
   #comment {
