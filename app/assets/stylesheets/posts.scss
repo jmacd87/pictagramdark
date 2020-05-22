@@ -46,11 +46,9 @@
 
 .post-bottom {
   background-color:#505050;
-  padding-bottom: 15px;
   .user-name, .comment-content {
     display: inline;
-    color: #125688;
-    
+    color: #202020
   }
   .caption {
     margin-bottom: 7px;
@@ -58,14 +56,14 @@
   .user-name {
     font-weight: 500;
     margin-right: 0.3em;
-    color: #125688;
+    color: #337ab7;
     font-size: 15px;
   }
   .user-name, .caption-content {
     display: inline;
   }
   .user-name a{
-    color: #125688;
+    color: #337ab7 !important;
     margin-right: 0.3em;
   }
   
@@ -81,10 +79,7 @@
     }
   }
   margin-bottom: 5px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 0px;
+  padding:20px;
   font-size: 15px;
   line-height: 18px;
 }

@@ -14,7 +14,7 @@
 
 .profile-user-name {
   display: inline;
-  color: #125688;
+  color: #337ab7;
 }
 
 a.btn.edit-button {
@@ -25,7 +25,7 @@ a.btn.edit-button {
 
 .profile-bio {
   margin-top: 20px;
-  color: #125688;
+  color: #337ab7;
 }
 
 .follow-button {
@@ -43,13 +43,13 @@ a.btn.edit-button {
 
 .unfollow-button {
   text-transform: uppercase;
-  border-color: #66bd2b;
-  background-color: #66bd2b;
+  border-color: #337ab7;
+  background-color: #337ab7;
   color: white;
   margin-left: 20px;
   &:visited, &:focus, &:hover {
-    border-color: #47821F;
-    background-color: #47821F;
+    border-color: #2D6396;
+    background-color: #2D6396;
     color: white;
   }
 }
@@ -57,5 +57,5 @@ a.btn.edit-button {
 .user-statistics {
   display: flex;
   justify-content: space-between;
-  color: #125688;
+  color: #337ab7;
 }
