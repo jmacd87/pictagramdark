@@ -1,26 +1,25 @@
 .login-bg {
-  padding-top: 150px;
-  height: 100vh;
+  height: 90vh;
+  background-color: var(--clr-light);
   width: 100%;
-  background-image: url(https://images.pond5.com/color-burst-colorful-blue-pink-footage-089236669_prevstill.jpeg);
-  background-size: cover !important;
-  background-color: #202020;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-
 }
 
 .log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
   border: none;
-  background: #202020!important;
-  color:#5E5E5D;
+  background: var(--clr-dark)!important;
+  color:var(--clr-accent);
+  text-align: center !important;
+  position:relative;
+ 
+}
+.log-in.panel {
+  border-radius: 15px;
+  width: 345px;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top: 20%;
 }
 
-.log-in.panel {
-  width: 350px;
-  border-radius: 15px;
+.btn-info{
+  background-color:var(--clr-accent) !important;
 }

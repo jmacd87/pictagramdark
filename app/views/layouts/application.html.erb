@@ -8,85 +8,79 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta charset='utf-8' />
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  </head>
+    <meta name='viewport' content='initial-scale=1,width=device-width' />
+    </head>
 
   <body>
-<nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-container">
-    <div class="navbar-header">
-      <div class="navbar-brand">
-      <h2>Pictagram</h2>
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header">
+        <h2>Pictagram</h2>
+        </div>
+        <div class="navbar-links">
+        <button class="hamburger hamburger--spin " type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+            
+            </div>
       </div>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-          <li>
-            <% if session[:user_id]!= nil %>
-            <%= render 'notifications/notification_dropdown' %>
-            <%end%>
-          </li>
-          <div class= "w-100 mobile_view_hide">
-                
-                <li>
+  </nav>   
+  <nav class="navigation">
+  <ul class="nav-list">
                   <% if session[:user_id]!= nil %>
-                <%= link_to "New Post", new_post_path %>
-                </li>
-                <%end%>
-                <li>
-                <%= link_to "Browse Posts", browse_posts_path %>
-                </li>
+                    <li class="nav-item">
+                      <%= link_to "NEW POST", new_post_path%>
+                    </li>
+                  <%end%>
+                    <li class="nav-item">
+                        <%= link_to "BROWSE", browse_posts_path %>
+                    </li>
                 <% if session[:user_id]== nil %>
-                <li>
-                <%= link_to "Login", login_path %>
-                </li>
-                <li>
-                <%= link_to "Register", signup_path %>
-                </li>
+                  <li class="nav-item"> 
+                    <%= link_to "LOGIN", login_path %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to "REGISTER", signup_path %>
+                  </li>
                 <%else%>
-                <li>
-                <%= link_to "Logout", logout_path %>
-                </li>
+                    <li class="nav-item">
+                      <%= link_to "LOGOUT", logout_path %>
+                    </li>
                 <% end %> 
-          </div>
-      </ul>
-
-  </div>
+            </ul> 
 </nav>
-
+    
 
 <div class="container">
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
-  <% end %>
-</div>
-</div>
+
   <%= yield %>
 
   <footer>
     <div class="footer">
-    <div class="w-100 desk_view_hide">
+    <div class="w-100 mobile-icons">
         <ul class="icons">
                         <li class="icons">
-                          <%= link_to posts_path do %>
+                          <%= link_to posts_path, :class => :"nav__link" do %>
                                 <i class="fas fa-home"></i>
                           <%end%>
                         </li>
                         <li class="icons">
-                          <%= link_to browse_posts_path do %>
+                          <%= link_to browse_posts_path, :class => :"nav__link" do %>
                             <i class="fas fa-search"></i>
                               
                           <%end%>
                         </li>
                          <li class="icons">
-                          <%= link_to new_post_path do %>
+                          <%= link_to new_post_path, :class => :"nav__link" do %>
                                 <i class="far fa-plus-square"></i>
                           <%end%>
                         </li>
 
                         <%if current_user != nil %>
                         <li class="icons">
-                            <%= link_to profile_path(current_user.user_name) do %>
+                            <%= link_to profile_path(current_user.user_name), :class => :"nav__link" do %>
                                 <i class="fas fa-user-alt"></i>
                             <%end%>
                         </li>
@@ -97,12 +91,12 @@
                         </li>
                         <%else%>
                           <li class="icons">
-                            <%= link_to login_path do %>
+                            <%= link_to login_path, :class => :"nav__link" do %>
                                 <i class="fas fa-sign-in-alt"></i>
                                 <%end%>
                           </li>
                           <li class="icons">
-                            <%= link_to signup_path do %>
+                            <%= link_to signup_path, :class => :"nav__link" do %>
                                 <i class="fas fa-user-plus"></i>
                                 <%end%>
                           </li>
@@ -114,12 +108,23 @@
 </footer>
 <!--     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/caef68614d.js"></script>
 <script>
      $(document).ready(function(){
         $('.dropdown-toggle').dropdown()
     });
+    
+</script>
+<script>
+  // Look for .hamburger
+  var hamburger = document.querySelector(".hamburger");
+  var navigation = document.querySelector(".navigation");
+  // On click
+  hamburger.addEventListener("click", function() {
+    // Toggle class "is-active"
+    hamburger.classList.toggle("is-active");
+    navigation.classList.toggle("is-active");
+  });
 </script>
 <!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   </body>
